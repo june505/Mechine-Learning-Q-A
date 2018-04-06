@@ -30,3 +30,18 @@
 - **适用数据类型**：数值型和标称型数据
 
 ### SVM推导
+- 推导目标函数
+对于给定数据集$T=\{(x_1,y_1),(x_2,y_2),...,(x_N,y_N)\}$,其中$x_i\epsilon \chi=R^n$,$y_i=\{+1,-1\}$,i=1,2,...,N. 
+- 根据题设，分隔超平面$y(x)=w \cdot x+b=0$
+- 有：
+$$
+\begin{cases}
+y(x_i)>0\Leftrightarrow&y_i>0\\
+y(x_i)<0\Leftrightarrow&y_i<0
+\end{cases} \Rightarrow \hat{\gamma}=y_i*y(x_i)>0 \cdots\cdots\cdots\cdots\cdots\cdots(1)
+$$
+
+- 当w,b等比例缩放时候，$\hat{\gamma}$也相应等比例缩放，因此对法向量w加以约束：
+$$
+{\hat{\gamma_i}\over||w||}={y_i*(w \cdot x_i+b)\over ||w||}\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots(2)
+$$
